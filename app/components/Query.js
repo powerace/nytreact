@@ -7,11 +7,11 @@ var Query = React.createClass({
 			<div className="panel-body">
 				<form role="form">
 				  <div className="form-group">
-				    <label for="search">Search Term:</label>
+				    <label htmlFor="search">Search Term:</label>
 				    <input type="text" className="form-control" id="searchTerm"/>
 				  </div>
 				  <div className="form-group">
-				    <label for="pwd">Number of Records to Retrieve:</label>
+				    <label htmlFor="pwd">Number of Records to Retrieve:</label>
 						<select className="form-control" id="numRecordsSelect">
 							<option value="1">1</option>
 							<option value="5">5</option>
@@ -19,7 +19,7 @@ var Query = React.createClass({
 						</select>			  
 				  </div>
 				  <div className="form-group">
-				    <label for="startYear">Start Year (Optional):</label>
+				    <label htmlFor="startYear">Start Year (Optional):</label>
 				    <div className='input-group date' data-provide="datepicker">
 			          <input type='text' className="form-control" />
 			          <span className="input-group-addon">
@@ -28,7 +28,7 @@ var Query = React.createClass({
 			      </div>
 				  </div>
 				  <div className="form-group">
-				    <label for="endYear">End Year (Optional):</label>
+				    <label htmlFor="endYear">End Year (Optional):</label>
 				    <div className='input-group date' id="date1">
 			          <input type='text' className="form-control" />
 			          <span className="input-group-addon">

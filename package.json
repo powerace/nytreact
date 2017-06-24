@@ -24,6 +24,10 @@
     "webpack": "^3.0.0"
   },
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.10.8",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-router": "^2.4.1"
