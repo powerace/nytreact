@@ -2,15 +2,13 @@ var React = require("react");
 
 var ReactDOM = require("react-dom");
 
-var routes = require("./app/config/routes");
+// var routes = require("./app/config/routes");
 
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require('mongoose');
-//var express = require("express");
-//var exphbs = require("express-handlebars");
-
-ReactDOM.render(routes, document.getElementById("app"));
+var express = require("express");
+var exphbs = require("express-handlebars");
 
 // Require Article models
 var Article = require("./models/Article.js");
@@ -31,6 +29,8 @@ db.once("open", function() {
 
 //Initialize Express
 var app = express();
+var PORT = process.env.PORT || 3000;
+
 // use logger
 app.use(logger("dev"));
 //app setup
@@ -51,4 +51,8 @@ app.engine('.hbs', exphbs({
 }));
 app.set("view engine", "hbs");
 
+// Listener
+app.listen(PORT, function() {
+  console.log("App listening on PORT: " + PORT);
+});
 

@@ -20,8 +20,8 @@ var Query = React.createClass({
 				  </div>
 				  <div className="form-group">
 				    <label htmlFor="startYear">Start Year (Optional):</label>
-				    <div className='input-group date' data-provide="datepicker">
-			          <input type='text' className="form-control" />
+				    <div className='input-group date' id="date1">
+			          <input id="startYear" type='text' className="form-control" />
 			          <span className="input-group-addon">
 			              <span className="glyphicon glyphicon-calendar"></span>
 			          </span>
@@ -29,8 +29,8 @@ var Query = React.createClass({
 				  </div>
 				  <div className="form-group">
 				    <label htmlFor="endYear">End Year (Optional):</label>
-				    <div className='input-group date' id="date1">
-			          <input type='text' className="form-control" />
+				    <div className='input-group date' id="date2">
+			          <input id="endYear" type='text' className="form-control" />
 			          <span className="input-group-addon">
 			              <span className="glyphicon glyphicon-calendar"></span>
 			          </span>

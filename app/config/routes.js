@@ -27,11 +27,9 @@ module.exports = (
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
 
-      {/* If user selects Search or Saved show the appropriate component */}
       <Route path="search" component={Search} />
       <Route path="saved" component={Saved} />
 
-      {/* If user selects any other path... we get the Search Route */}
       <IndexRoute component={Search} />
 
     </Route>

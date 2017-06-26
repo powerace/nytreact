@@ -1,6 +1,8 @@
 //datepicker calendar
 $(function () {
-    $('#date1').datepicker();
+    $('#date1, #date2').datepicker({
+    	format:'yyyymmdd'
+    });
 });
 
 //API key
@@ -11,7 +13,7 @@ var queryURLBase = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api
 
 
 //make request on submit
-$('#runSearch').on("click", function(e){
+$('#app').on("click", "#runSearch", function(e){
 	e.preventDefault();
 	var searchTerm = $('#searchTerm').val().trim();
 	var queryURL = queryURLBase + searchTerm;
@@ -22,14 +24,14 @@ $('#runSearch').on("click", function(e){
 
 	// Start Year
 	var startYear = $('#startYear').val();
-
+	console.log(startYear)
 	// End Year
 	var endYear = $('#endYear').val();
-
+	console.log(endYear)
 	//add start year to query url if not blank
 	if (startYear !== undefined){
 		queryURL += "&begin_date=" + startYear;
-		console.log(startYear)
+		
 	}
 
 	//add end year to query url if not blank
@@ -44,18 +46,11 @@ $('#runSearch').on("click", function(e){
     dataType: 'json'
 	}).done(function(data){
 		$.ajax({
-			url: queryURL,
+			url: "/articles",
 			method: 'POST'
 		})
-
 	})
 
-	// $.ajax({
-	// 	url: "/",
-	// 	method: 'POST'
-	// }).done(function(data){
-	// 	console.log(data);
-	// })
 
 });
 
