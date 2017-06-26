@@ -9,17 +9,17 @@ var ArticleSchema = new Schema({
   // title is a required string
   title: {
     type: String,
-    required: true
+    // required: true
   },
   // url is a required string
   url: {
     type: String,
-    required: true
+    // required: true
   },
-  // category is a required string
+  // date
   date: {
     type: Date,
-    required: true
+    // required: true
   }
 });
 
